@@ -1,10 +1,19 @@
 /*
- * First and Last Names
+ * Donovan Simonton
  */
 
 public class Homework3 {
 
 	private int value1, value2, value3;
+
+	/* Tests to verify that your solutions work
+	 * Do not submit your homework until this compiles and the words
+	 * "All Pass" are printed
+	 */
+	public static void main(String[] args) {
+		Homework3 hw3 = new Homework3(5, 10, 15);
+		hw3.grade();
+	}
 
 	public Homework3(int v1, int v2, int v3) {
 		value1 = v1;
@@ -17,44 +26,40 @@ public class Homework3 {
 	 * class (e.g. Math.random())
 	 */
 	public void grade() {
-
+		grade(this);
 	}
 
 	/* Calculate and return the sum of value1, value2, and value3
 	 */
 	public int sum() {
-
+		int vSum = value1 + value2 + value3;
+		return vSum;
 	}
 
 	/* Calculate and return the average of value1, value2, and value3
 	 * Hint: the average of numbers can be fractional
 	 */
 	public double average() {
-
+		double average = (value1 + value2 + value3)/2;
+		return average;
 	}
 
 	/* Calculate and return the difference between the product and sum of
 	 * value 1, value2, and value3
 	 */
 	 public int productSumDifference() {
-
+		 int productSumDifference = (value1 * value2 * value3) - (value1 + value2 + value3);
+		 return productSumDifference;
 	 }
 
 	 /* Calculate and return the sum of the squares of value1, value2, and
 	  * value3
 	  */
-	  public int sumSquares() {
-
+	  public double sumSquares() {
+			double sumSquares = Math.pow(value1, 2) + Math.pow(value2, 2) + Math.pow(value3, 2);
+			return  sumSquares;
 	  }
 
-	  /* Tests to verify that your solutions work
-	   * Do not submit your homework until this compiles and the words
-	   * "All Pass" are printed
-	   */
-	  public static void main(String[] args) {
-		  Homework3 hw3 = new Homework3(5, 10, 15);
-		  hw3.grade();
-	  }
 
 	  public static void grade(Homework3 hw3) {
 		  int exitCode = 0;
